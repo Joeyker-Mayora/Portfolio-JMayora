@@ -22,8 +22,8 @@ function App() {
         <Home/>
         <Info/>
         <Skills/>
-        <Proyects/>
         <Testimonials/>
+        <Proyects/>
         <Contact/>
       </main>
 

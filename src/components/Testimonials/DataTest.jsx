@@ -15,6 +15,13 @@ export const DataTest = [
         image: Agustin,
         name: "Agustin Gimenez Pava",
         profession: "SRE Engineer | Python dev | Network engineer",
-        description: "Tuve el placer de trabajar con Joeyker Mayora en el desarrollo de mi página web, y no puedo estar más satisfecho con los resultados. Joeyker es un desarrollador excepcional en ReactJS, con un profundo conocimiento y habilidad técnica que se reflejan en cada proyecto que toca."
+        description: "Tuve el placer de trabajar con Joeyker Mayora en el desarrollo de mi página web, y no puedo estar más satisfecho con los resultados. Joeyker es un desarrollador excepcional en ReactJS."
     },
+    {
+        id: 2,
+        image: Agustin,
+        name: "Agustin Gimenez Pava",
+        profession: "SRE Engineer | Python dev | Network engineer",
+        description: "Tuve el placer de trabajar con Joeyker Mayora en el desarrollo de mi página web, y no puedo estar más satisfecho con los resultados. Joeyker es un desarrollador excepcional en ReactJS."    },
+    
 ]
