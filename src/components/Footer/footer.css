@@ -1,0 +1,28 @@
+.footer {
+background-color: black;
+}
+.footer-container {
+    padding: 2rem 0 6rem;
+    
+}
+.footer-title,
+.footer-link {
+    color: var(--text-color);
+}
+
+.footer-title {
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
+.footer-link:hover {
+    color: var(--title-color-dark);
+    transition: 2s;
+}
+.footer-list,
+.footer-social,
+.footer-copy {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin-bottom: var(--mb-1);
+}

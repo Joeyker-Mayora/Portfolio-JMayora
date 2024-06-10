@@ -1,0 +1,84 @@
+.info-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+}
+.info-descripcion {
+    padding: 0 4rem 0 0;
+    margin-bottom: var(--mb-2-5);
+}
+
+
+
+.section-title {
+    color: var(--title-color-dark);
+}
+.info-img {
+    background: url(../../asset/pantalla-computadora-lineas-codigo-datos-escritorio-oficina-desarrollo-ti_236854-48407.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgba(68, 68, 68, 0.3);
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+    animation: profile__animate 5s ease-in-out infinite 1s;
+        
+}
+@keyframes profile__animate {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.btn-cv {
+    background-color: var(--title-color-dark);
+    padding: .8rem;
+    cursor:pointer;
+    color: rgba(240, 241, 241, 0.959);
+    border-radius: 1rem;
+}
+.btn-cv:hover{
+    color: white;
+    background-color: black;
+    transition: 1s;
+}
+
+@media screen and (max-width: 992px) {
+    .info-container {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+        
+    }
+    .info-img {
+        width: 220px;
+        height: 220px;
+    }
+    .info-data {
+        text-align: center;
+    }
+    .info-descripcion {
+        padding: 0 5rem;
+        
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .info-descripcion{
+        padding: 0;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    .container {
+      margin-left: var(--mb-1);
+      margin-right: var(--mb-1);
+  
+    }
+  }
