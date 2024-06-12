@@ -132,6 +132,7 @@
 @media screen and (max-width: 350px) {
     .nav-menu {
       padding: 2rem 0.25rem 4rem;
+      
     }
     .nav-list {
         column-gap: 0;
@@ -140,6 +141,7 @@
   .hidden {
     display: none;
     transition: .5s;
+    
 
     
   
