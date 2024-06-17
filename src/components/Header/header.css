@@ -1,21 +1,4 @@
-/* Estilos para oscurecer el fondo */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(5px);
-  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-  z-index: 70; /* Asegúrate de que este z-index esté entre el fondo y el menú */
-  display: none; /* Oculto por defecto */
-}
 
-.header.active-menu + .overlay {
-  display: block; /* Mostrar la superposición cuando el menú está activo */
-}
-
-/* Otros estilos necesarios */
 .header {
   width: 100%;
   position: fixed;
@@ -23,6 +6,7 @@
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+  box-shadow: 0px 5px 10px rgba(165, 164, 164, 0.2);
 }
 
 .nav {
@@ -75,10 +59,27 @@
 }
 
 @media screen and (max-width: 768px) {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 70; 
+    display: none; 
+  }
+  
+  .header.active-menu + .overlay {
+    display: block; 
+  }
+  
   .header {
     top: initial;
     bottom: 0;
-  }
+    box-shadow: 0px -5px 10px rgba(165, 164, 164, 0.2);
+  
 
   .nav {
     height: var(--header-height);
@@ -139,6 +140,7 @@
   .nav-menu {
     padding: 2rem 0.25rem 4rem;
   }
+ 
 
   .nav-list {
     column-gap: 0;

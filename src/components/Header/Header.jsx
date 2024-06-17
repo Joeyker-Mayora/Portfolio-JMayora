@@ -29,7 +29,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a href="#Proyectos" onClick={() => showMenu(!Toggle)} className="nav-link active-link">
-                  <i className="uil uil-scenery nav-icon"></i> Proyectos
+                  <i className="uil uil-scenery nav-icon"></i> Portafolio
                 </a>
               </li>
               <li className="nav-item">
