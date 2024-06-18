@@ -25,7 +25,6 @@
 
 .work-title {
     font-size: 25px ;
-    font-weight: var(--font-medium);
     color: var(--title-color);
     margin-bottom: var(--mb-0-5);
     text-align: center;
@@ -178,10 +177,10 @@
     }
     .modal-title {
         padding-top: 2rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .work-title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         
     }
   }
