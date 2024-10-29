@@ -1,6 +1,6 @@
 
 import "./info.css";
-import Cv from '../../asset/JoeykerMayora-Developer.pdf'
+import Cv from '../../asset/SoftwareDeveloper.pdf'
 import Calificacion from "./Calificacion";
 
 
@@ -14,7 +14,7 @@ const Info = () => {
             <div className="info-data">
                
                 <p className="info-descripcion">
-                Desarrollador de Software con 1 año de experiencia, especializado en frontend, me dedico a crear interfaces de usuario dinámicas y atractivas que mejoran la experiencia del usuario. Dominio avanzado de frameworks como React y Angular. Mi objetivo es combinar diseño y funcionalidad para construir productos que no solo sean visualmente impactantes, sino también altamente funcionales.
+                Desarrollador de Software con 1 año y 7 de experiencia, especializado en frontend, me dedico a crear interfaces de usuario dinámicas y atractivas que mejoran la experiencia del usuario. Dominio avanzado de frameworks como React y Angular. Mi objetivo es combinar diseño y funcionalidad para construir productos que no solo sean visualmente impactantes, sino también altamente funcionales.
                 </p>
                 <a download="" href={Cv} className="btn-cv button button-flex">Descargar Cv <i class="uil uil-file-download-alt"></i></a>
             </div>

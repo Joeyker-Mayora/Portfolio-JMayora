@@ -31,13 +31,13 @@ const Calificacion = () => {
                 onClick={() => toggleTab(1)}>
                     <div className="q-data">
                         <div>
-                            <h3 className="q-title">Next Js</h3>
+                            <h3 className="q-title">Tenicatura de Programación</h3>
                             <span className="q-subtitle">
-                                Udemy - Plataforma Digital
+                                UTN, Argentina
                             </span>
                             <div className="q-calendar">
                             <i class='bx bxs-calendar'></i>  
-                            2023 - Al presente
+                            2022 - Al presente
                             </div>
                         </div>
 
@@ -116,7 +116,7 @@ const Calificacion = () => {
                             <span className="q-subtitle">
                                 The Higher Self NFTs - Buenos Aires, Argentina
                             </span>
-                            <div className="q-calendar"><i class='bx bxs-calendar'></i> 2021 - 2023
+                            <div className="q-calendar"><i class='bx bxs-calendar'></i> 2022 - 2024
                             </div>
                         </div>
 
@@ -139,7 +139,7 @@ const Calificacion = () => {
                             </span>
                             <div className="q-calendar">
                             <i class='bx bxs-calendar'></i>  
-                            2021 - 2022
+                            2022 - 2023
                             </div>
                         </div>
 
