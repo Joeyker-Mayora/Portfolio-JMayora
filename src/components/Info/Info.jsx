@@ -1,6 +1,6 @@
 
 import "./info.css";
-import Cv from '../../asset/SoftwareDeveloper.pdf'
+import Cv from '../../asset/JoeykerMayoraFront.pdf'
 import Calificacion from "./Calificacion";
 
 
