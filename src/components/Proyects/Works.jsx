@@ -3,6 +3,8 @@ import Comerce from '../../asset/Img/comerce.png';
 import Turnos from '../../asset/Img/turnos.png';
 import Rifas from '../../asset/Img/rifas.png';
 import Teckologys from '../../asset/Img/Teckologys.png';
+import Gramos from '../../asset/Img/Gramos.png';
+
 
 import './proyects.css';
 
@@ -25,15 +27,24 @@ const Works = () => {
     },
     {
       id: 2,
+      title: 'WhatsOrder',
+      img: Gramos,
+      description: 'Sitio web de pedidos en línea con envío automático a WhatsApp, diseñado para que los clientes realicen sus pedidos de manera rápida y sencilla desde cualquier dispositivo. La plataforma permite seleccionar productos, personalizar opciones y enviar la orden directamente al negocio a través de WhatsApp, agilizando la comunicación y reduciendo errores. Su diseño intuitivo y responsivo ofrece una experiencia de usuario clara y eficiente.',
+      stack: ['React Js', 'Tailwind', 'Javascript', 'MongoDb','Cloudinary'],
+      demo: 'https://www.390gramosymassabor.com/',
+      code: '',
+    },
+    {
+      id: 3,
       title: 'Ticket Raffle',
       img: Rifas,
-      description: 'Sistema web de gestión de sorteos de tickets, diseñado para que los usuarios puedan seleccionar sus boletos de forma aleatoria y recibirlos directamente por correo electrónico. La plataforma automatiza todo el proceso de compra y asignación de tickets, asegurando transparencia en los sorteos y comodidad para los participantes. Cuenta con un flujo intuitivo que permite comprar, recibir y validar los tickets sin complicaciones, brindando una experiencia segura, rápida y confiable tanto para los usuarios como para los organizadores del sorteo.',
+      description: 'Sitio web de gestión de sorteos de tickets, diseñado para que los usuarios puedan seleccionar sus boletos de forma aleatoria y recibirlos directamente por correo electrónico. La plataforma automatiza todo el proceso de compra y asignación de tickets, asegurando transparencia en los sorteos y comodidad para los participantes. Cuenta con un flujo intuitivo que permite comprar, recibir y validar los tickets sin complicaciones, brindando una experiencia segura, rápida y confiable tanto para los usuarios como para los organizadores del sorteo.',
       stack: ['React Js', 'Tailwind', 'Javascript', 'MongoDb', 'Nodejs', 'Express'],
       demo: 'https://www.rifas24.com/',
       code: '',
     },
     {
-      id: 3,
+      id: 4,
       title: 'Website Corporate',
       img: Teckologys,
       description: 'Sitio web corporativo desarrollado para una empresa de servicios, con el objetivo de fortalecer su presencia digital y transmitir una imagen profesional, clara y confiable. La plataforma presenta de forma ordenada la información clave de la empresa, sus servicios, valores y canales de contacto, priorizando una navegación intuitiva, diseño responsivo y una experiencia de usuario óptima en distintos dispositivos.',
@@ -42,7 +53,7 @@ const Works = () => {
       code: '',
     },
     {
-      id: 4,
+      id: 5,
       title: 'E-Commerce',
       img: Comerce,
       description: 'Está construido con un enfoque en la usabilidad y el diseño moderno. La estructura de la página permite una navegación intuitiva, con filtros avanzados y búsqueda optimizada.',
