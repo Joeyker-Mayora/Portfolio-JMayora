@@ -1,6 +1,6 @@
 
 import "./info.css";
-import Cv from '../../asset/JoeykerMayoraFront.pdf'
+import Cv from '../../asset/JoeykerMayoraFullStack.pdf'
 import Calificacion from "./Calificacion";
 
 
@@ -14,7 +14,9 @@ const Info = () => {
             <div className="info-data">
                
                 <p className="info-descripcion">
-                Desarrollador de Software con 1 año y 7 de experiencia, especializado en frontend, me dedico a crear interfaces de usuario dinámicas y atractivas que mejoran la experiencia del usuario. Dominio avanzado de frameworks como React y Angular. Mi objetivo es combinar diseño y funcionalidad para construir productos que no solo sean visualmente impactantes, sino también altamente funcionales.
+               Desarrollador Full Stack con experiencia en el diseño y desarrollo de aplicaciones web modernas, abarcando tanto el frontend como el backend. Especializado en la construcción de interfaces eficientes y orientadas al usuario, así como en el desarrollo de APIs REST, manejo de bases de datos y arquitectura de aplicaciones escalables.
+ 
+
                 </p>
                 <a download="" href={Cv} className="btn-cv button button-flex">Descargar Cv <i class="uil uil-file-download-alt"></i></a>
             </div>
