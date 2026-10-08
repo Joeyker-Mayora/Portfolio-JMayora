@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Info from './components/Info/Info';
+import Profile from './components/Profile/Profile';
 import Proyects from './components/Proyects/Proyects';
 import ScrollUp from './components/ScrollUp/ScrollUp';
 import Skills from './components/Skills/Skills';
@@ -18,7 +19,7 @@ function App() {
     <>
       <Header/>
       
-      <main className='name'>
+      <main className="name">
         <Home/>
         <Info/>
         <Skills/>
@@ -26,6 +27,7 @@ function App() {
         <Proyects/>
         <Contact/>
       </main>
+      <Profile/>
 
       <Footer/>
       <ScrollUp/>

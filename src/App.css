@@ -122,7 +122,7 @@ button{
 }
 
 .container {
-  max-width: 948px;
+  width: min(1320px, calc(100% - 2.5rem));
   margin-left: auto;
   margin-right: auto;
 }
@@ -156,9 +156,7 @@ button{
 
 @media screen and (max-width: 992px) {
   .container {
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
-
+    width: calc(100% - 2rem);
   }
 }
 
@@ -178,8 +176,6 @@ button{
 
 @media screen and (max-width: 350px) {
   .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-
+    width: calc(100% - 1.25rem);
   }
 }

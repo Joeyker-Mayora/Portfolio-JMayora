@@ -102,6 +102,43 @@
     line-height: 1.6;
 }
 
+.modal-features {
+    list-style: none;
+    text-align: left;
+    margin: 0 0 1rem;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+}
+
+.modal-features li {
+    display: grid;
+    gap: 0.15rem;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 0.75rem;
+    padding: 0.65rem 0.9rem;
+}
+
+.modal-features strong {
+    color: var(--title-color);
+    font-size: var(--smaller-font-size);
+}
+
+.modal-features span {
+    font-size: var(--smaller-font-size);
+    line-height: 1.4;
+}
+
+.modal-flow {
+    margin-top: 0.5rem;
+}
+
+.modal-flow-title {
+    font-size: 1.15rem;
+    color: var(--title-color);
+    margin-bottom: 0.35rem;
+}
+
 .content-stack {
     display: flex;
     flex-wrap: wrap;
