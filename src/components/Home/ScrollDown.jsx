@@ -4,7 +4,7 @@ const ScrollDown = () => {
   return (
     <div className="home-scroll">
         <a href="#Informacion" className="home-scroll-button button--flex">
-        Desliza hacia abajo <i class="uil uil-angle-down"></i>
+        Desliza hacia abajo <i className="uil uil-angle-down"></i>
         </a>
     </div>
   )

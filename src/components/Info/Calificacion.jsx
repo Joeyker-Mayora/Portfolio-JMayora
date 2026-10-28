@@ -1,161 +1,106 @@
 import { useState } from "react";
 import "./C.css";
 
+const education = [
+  {
+    title: "Tecnicatura de Programación",
+    place: "UTN, Argentina",
+    period: "2022 - 2024",
+  },
+  {
+    title: "React Js Avanzado",
+    place: "Coderhouse, Argentina",
+    period: "2022 - 2023",
+  },
+  {
+    title: "Javascript",
+    place: "EducaciónIT, Argentina",
+    period: "2021 - 2022",
+  },
+  {
+    title: "HTML y CSS",
+    place: "EducacionIT, Argentina",
+    period: "2021 - 2022",
+  },
+];
+
+const experience = [
+  {
+    title: "Full Stack Developer",
+    place: "Moto Repuestos Orovalor",
+    period: "Feb. 2026 – Nov. 2026",
+  },
+  {
+    title: "Frontend Developer",
+    place: "The Higher Self NFTs - Buenos Aires, Argentina",
+    period: "2023 - 2025",
+  },
+  {
+    title: "Technical Support",
+    place: "I4Vision - California, Estados Unidos",
+    period: "2022 - 2023",
+  },
+];
+
+const TimelineItem = ({ item }) => (
+  <div className="about-qual-data">
+    <div className="about-qual-marker" aria-hidden="true">
+      <span className="about-qual-rounder"></span>
+      <span className="about-qual-line"></span>
+    </div>
+    <div className="about-qual-card">
+      <h3 className="about-qual-title">{item.title}</h3>
+      <span className="about-qual-place">{item.place}</span>
+      <div className="about-qual-calendar">
+        <i className="bx bxs-calendar"></i>
+        {item.period}
+      </div>
+    </div>
+  </div>
+);
+
 const Calificacion = () => {
-    const [toggleState, setToggleState] = useState(1);
+  const [activeTab, setActiveTab] = useState("education");
+  const items = activeTab === "education" ? education : experience;
 
-    const toggleTab = (index) => {
-        setToggleState(index)
-    }
   return (
-    <section className="q section">
-        <h2 className="section-title">Calificación<i class='bx bx-badge-check'></i></h2>
-        <span className="section-subtitle">Crecimiento Profesional</span>
+    <div className="about-qual">
+      <p className="about-qual-label">Trayectoria</p>
 
-        <div className="q-container container">
-            <div className="q-tabs">
-                <div className= {toggleState === 1 ? "q-button q-active button-flex" : "q-button button-flex"} 
-                onClick={() => toggleTab(1)}>
-                <i class='bx bxs-graduation icon'></i> Educación
+      <div className="about-qual-tabs" role="tablist">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={activeTab === "education"}
+          className={`about-qual-button${
+            activeTab === "education" ? " is-active" : ""
+          }`}
+          onClick={() => setActiveTab("education")}
+        >
+          <i className="bx bxs-graduation"></i>
+          Educación
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={activeTab === "experience"}
+          className={`about-qual-button${
+            activeTab === "experience" ? " is-active" : ""
+          }`}
+          onClick={() => setActiveTab("experience")}
+        >
+          <i className="bx bxs-briefcase"></i>
+          Experiencia
+        </button>
+      </div>
 
-                </div>
-                <div className= {toggleState === 2 ? "q-button q-active button-flex" : "q-button button-flex"}
-                onClick={() => toggleTab(2)}>
-                <i class='bx bxs-briefcase icon'></i> Experiencia
-                </div>
-            </div>
+      <div className="about-qual-content" role="tabpanel">
+        {items.map((item) => (
+          <TimelineItem key={`${item.title}-${item.period}`} item={item} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-
-            <div className="q-sections">
-                <div className={toggleState === 1 ? "q-content q-content-active" : "q-content"}
-                onClick={() => toggleTab(1)}>
-                    <div className="q-data">
-                        <div>
-                            <h3 className="q-title">Tecnicatura de Programación</h3>
-                            <span className="q-subtitle">
-                                UTN, Argentina
-                            </span>
-                            <div className="q-calendar">
-                            <i class='bx bxs-calendar'></i>  
-                            2022 - 2024
-                            </div>
-                        </div>
-
-                        <div>
-                            <span className="q-rounder"></span>
-                            <span className="q-line"></span>
-                        </div>
-                    </div>
-                    <div className="q-data">
-                        <div></div>
-                        <div>
-                            <span className="q-rounder"></span>
-                            <span className="q-line"></span>
-                        </div>
-
-                        <div>
-                            <h3 className="q-title">React Js Avanzado</h3>
-                            <span className="q-subtitle">
-                                Coderhouse, Argentina
-                            </span>
-                            <div className="q-calendar">
-                            <i class='bx bxs-calendar'></i>  
-                            2022 - 2023
-                            </div>
-                        </div>
-
-                        
-                    </div>
-                    <div className="q-data">
-                        <div>
-                            <h3 className="q-title">Javascript</h3>
-                            <span className="q-subtitle">
-                                EducaciónIT, Argentina
-                            </span>
-                            <div className="q-calendar">
-                            <i class='bx bxs-calendar'></i>  
-                            2021 - 2022
-                            </div>
-                        </div>
-
-                        <div>
-                            <span className="q-rounder"></span>
-                            <span className="q-line"></span>
-                        </div>
-                    </div>
-                    <div className="q-data">
-                        <div></div>
-                        <div>
-                            <span className="q-rounder"></span>
-                            <span className="q-line"></span>
-                        </div>
-
-                        <div>
-                            <h3 className="q-title">HTML y CSS</h3>
-                            <span className="q-subtitle">
-                               EducacionIT, Argentina
-                            </span>
-                            <div className="q-calendar">
-                            <i class='bx bxs-calendar'></i>  
-                            2021 - 2022
-                            </div>
-                        </div>
-
-                        
-                    </div>
-                    
-                    
-
-                </div>
-
-                <div className={toggleState === 2 ? "q-content q-content-active" : "q-content"}
-                onClick={() => toggleTab(2)}>
-                    <div className="q-data">
-                        <div>
-                            <h3 className="q-title">Frontend Developer</h3>
-                            <span className="q-subtitle">
-                                The Higher Self NFTs - Buenos Aires, Argentina
-                            </span>
-                            <div className="q-calendar"><i class='bx bxs-calendar'></i> 2023 - 2025
-                            </div>
-                        </div>
-
-                        <div>
-                            <span className="q-rounder"></span>
-                            <span className="q-line"></span>
-                        </div>
-                    </div>
-                    <div className="q-data">
-                        <div></div>
-                        <div>
-                            <span className="q-rounder"></span>
-                            <span className="q-line"></span>
-                        </div>
-
-                        <div>
-                            <h3 className="q-title">Technical Support</h3>
-                            <span className="q-subtitle">
-                                I4Vision - California, Estados Unidos
-                            </span>
-                            <div className="q-calendar">
-                            <i class='bx bxs-calendar'></i>  
-                            2022 - 2023
-                            </div>
-                        </div>
-
-                        
-                    </div>
-                    
-                    
-                    
-
-                </div>
-
-               
-            </div>
-        </div>
-    </section>
-  )
-}
-
-export default Calificacion
+export default Calificacion;

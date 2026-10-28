@@ -4,13 +4,14 @@ import Cv from "../../asset/Joeyker-Mayora-C.pdf";
 import "./profile.css";
 
 const Profile = () => {
-  const [visible, setVisible] = useState(false);
+  const [pastHome, setPastHome] = useState(false);
+  const [infoInView, setInfoInView] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
       const home = document.getElementById("Inicio");
       const threshold = home ? home.offsetHeight * 0.42 : 280;
-      setVisible(window.scrollY > threshold);
+      setPastHome(window.scrollY > threshold);
     };
 
     onScroll();
@@ -21,6 +22,28 @@ const Profile = () => {
       window.removeEventListener("resize", onScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const info = document.getElementById("Informacion");
+    if (!info || typeof IntersectionObserver === "undefined") return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visiblePx = entry.intersectionRect?.height ?? 0;
+        setInfoInView(visiblePx > window.innerHeight * 0.22);
+      },
+      {
+        root: null,
+        threshold: [0, 0.05, 0.1, 0.2, 0.35, 0.5, 0.75, 1],
+        rootMargin: "0px",
+      }
+    );
+
+    observer.observe(info);
+    return () => observer.disconnect();
+  }, []);
+
+  const visible = pastHome && !infoInView;
 
   useEffect(() => {
     document.body.classList.toggle("profile-sticky-on", visible);

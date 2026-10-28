@@ -1,3 +1,4 @@
+import Cv from "../../asset/Joeyker-Mayora-C.pdf";
 import "./home.css";
 
 const Data = () => {
@@ -9,8 +10,8 @@ const Data = () => {
       </h1>
       <h3 className="home-subtitle">Full Stack Developer</h3>
       <p className="descripcion">"En el mundo del desarrollo de software, cada línea de código es una oportunidad para marcar la diferencia."</p>
-      <a href="#Informacion" className="btn">
-        Bienvenido <i className="bx bx-world"></i>
+      <a download="" href={Cv} className="btn">
+        Descargar Cv <i className="uil uil-file-download-alt"></i>
       </a>
     </div>
   )

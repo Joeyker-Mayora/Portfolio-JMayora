@@ -1,38 +1,58 @@
 import "./home.css";
 
-
+const links = [
+  {
+    href: "https://www.linkedin.com/in/joeyker-mayora-avilez-3b9993265/",
+    icon: "uil uil-linkedin",
+    label: "LinkedIn",
+    meta: "Network",
+    external: true,
+  },
+  {
+    href: "https://github.com/Joeyker-Mayora",
+    icon: "uil uil-github",
+    label: "GitHub",
+    meta: "Code",
+    external: true,
+  },
+  {
+    href: "mailto:oswaldo_avilez@outlook.es",
+    icon: "bx bxs-envelope",
+    label: "Email",
+    meta: "Write",
+    external: false,
+  },
+  {
+    href: "https://wa.me/1127029297",
+    icon: "uil uil-whatsapp-alt",
+    label: "WhatsApp",
+    meta: "Message",
+    external: true,
+  },
+];
 
 const Social = ({ className = "" }) => {
   return (
     <div className={`home-social ${className}`.trim()}>
-
-        <a href="https://www.linkedin.com/in/joeyker-mayora-avilez-3b9993265/"
-        className="home-social-icon"
-        target="_blank"
-        rel="noreferrer">
-          <i className="uil uil-linkedin"></i>
+      {links.map(({ href, icon, label, meta, external }) => (
+        <a
+          key={label}
+          href={href}
+          className="home-social-icon"
+          {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+        >
+          <span className="home-social-mark" aria-hidden="true">
+            <i className={icon}></i>
+          </span>
+          <span className="home-social-copy">
+            <span className="home-social-label">{label}</span>
+            <span className="home-social-meta">{meta}</span>
+          </span>
+          <i className="uil uil-arrow-up-right home-social-arrow" aria-hidden="true"></i>
         </a>
-
-        <a href="https://github.com/Joeyker-Mayora"
-        className="home-social-icon"
-        target="_blank"
-        rel="noreferrer">
-            <i className="uil uil-github"></i>
-        </a>
-
-        <a href="mailto:oswaldo_avilez@outlook.es"
-        className="home-social-icon">
-          <i className="bx bxs-envelope"></i>
-        </a>
-
-        <a href="https://wa.me/1127029297"
-        className="home-social-icon"
-        target="_blank"
-        rel="noreferrer">
-          <i className="uil uil-whatsapp-alt"></i>
-        </a>
-
+      ))}
     </div>
-  )
-}
-export default Social
+  );
+};
+
+export default Social;

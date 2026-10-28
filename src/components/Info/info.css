@@ -1,77 +1,203 @@
-.info-container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    column-gap: 4rem;
-}
-.info-descripcion {
-    padding: 0 4rem 0 0;
-    margin-bottom: var(--mb-2-5);
+.info-panel {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1.15fr) minmax(0, 0.95fr);
+  align-items: start;
+  column-gap: 2.75rem;
 }
 
-
-
-.section-title {
-    color: var(--title-color-dark);
+.info-media {
+  display: flex;
+  justify-content: center;
 }
+
 .info-img {
-    background: url(../../asset/pantalla-computadora-lineas-codigo-datos-escritorio-oficina-desarrollo-ti_236854-48407.avif);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    box-shadow: inset 0 0 0 9px rgba(68, 68, 68, 0.3);
-    width: 300px;
-    height: 300px;
-    justify-self: center;
-    animation: profile__animate 5s ease-in-out infinite 1s;
-        
-}
-@keyframes profile__animate {
-    0% {
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-    50% {
-        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    }
-    100% {
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
+  width: 280px;
+  height: 280px;
+  background: url(../../asset/profile.jpg) center 20% / cover no-repeat;
+  box-shadow: 0 10px 24px rgba(51, 51, 51, 0.16);
+  border: 4px solid #fff;
+  animation: profile__animate 5s ease-in-out infinite 1s;
+  flex-shrink: 0;
 }
 
-.btn-cv {
-    background-color: var(--title-color-dark);
-    padding: .8rem;
-    cursor:pointer;
-    color: rgba(240, 241, 241, 0.959);
-    border-radius: 1rem;
+@keyframes profile__animate {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
 }
-.btn-cv:hover{
-    color: white;
-    background-color: black;
-    transition: 1s;
+
+.info-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.info-name {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  color: var(--title-color-dark);
+}
+
+.info-name i {
+  font-size: 1.05rem;
+}
+
+.info-role {
+  margin: 0;
+  color: var(--subtitle);
+  font-size: 0.95rem;
+}
+
+.info-descripcion {
+  margin: 0.55rem 0 0;
+  color: var(--subtitle);
+  line-height: 1.75;
+  max-width: 36rem;
+}
+
+.info-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.1rem;
+  margin-top: 0.85rem;
+}
+
+.info-copy .home-social,
+.info-copy .info-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.info-copy .home-social-icon {
+  width: 2.45rem;
+  height: 2.45rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--container-color);
+  font-size: 1.2rem;
+  color: var(--title-color-dark);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.info-copy .home-social-icon:hover {
+  background: var(--title-color-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.info-cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: var(--title-color-dark);
+  color: rgba(240, 241, 241, 0.96);
+  padding: 0.75rem 1.2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.info-cv:hover {
+  background: #000;
+  color: #fff;
+}
+
+.info-path {
+  min-width: 0;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(51, 51, 51, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .info-img {
+    animation: none;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 993px) {
+  .info-panel {
+    grid-template-columns: 220px minmax(0, 1.15fr) minmax(0, 0.95fr);
+    column-gap: 1.75rem;
+  }
+
+  .info-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .info-path {
+    padding-left: 1.35rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
-    .info-container {
-        grid-template-columns: 1fr;
-        row-gap: 2.5rem;
-        
-    }
-    .info-img {
-        width: 220px;
-        height: 220px;
-    }
-    .info-data {
-        text-align: center;
-    }
-    .info-descripcion {
-        padding: 0 5rem;
-        
-    }
+  .info.section .section-subtitle {
+    margin-bottom: 2rem;
   }
-  
-  @media screen and (max-width: 576px) {
-    .info-descripcion{
-        padding: 0;
-    }
+
+  .info-panel {
+    grid-template-columns: 1fr;
+    row-gap: 1.35rem;
   }
-  
+
+  .info-media {
+    justify-content: center;
+  }
+
+  .info-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .info-copy {
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-name {
+    justify-content: center;
+  }
+
+  .info-descripcion {
+    text-align: left;
+    width: 100%;
+    max-width: none;
+  }
+
+  .info-actions {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .info-cv {
+    width: min(100%, 16rem);
+  }
+
+  .info-path {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(51, 51, 51, 0.12);
+    padding-top: 1.25rem;
+  }
+}
